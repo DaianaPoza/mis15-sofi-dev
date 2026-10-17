@@ -5,8 +5,8 @@ const Regalo = () => {
   const [mostrarDatos, setMostrarDatos] = useState(false);
   const [copiado, setCopiado] = useState("");
 
-  const alias = "Bernardita.moggia";
-  const cbu = "0000003100096230522885";
+  const alias = "alias";
+  const cbu = "numerodecbu";
 
   const copiarDato = async (texto, tipo) => {
     try {

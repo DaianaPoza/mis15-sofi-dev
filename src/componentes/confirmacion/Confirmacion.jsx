@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { supabase } from "../../lib/supabase";
+
 import "./Confirmacion.css";
 
 const Confirmacion = () => {
@@ -64,41 +64,11 @@ const Confirmacion = () => {
 
     setEnviando(true);
 
-    const { error: supabaseError } = await supabase
-      .from("confirmaciones")
-      .insert([
-        {
-          evento: "berni-fest",
 
-          nombre_apellido:
-            nombreApellido.trim(),
 
-          asiste: asiste,
+      // MUESTRA: simula el envío, no guarda datos
+    await new Promise((resolve) => setTimeout(resolve, 800));
 
-          cantidad_invitados:
-            asiste
-              ? cantidadInvitados
-              : 0,
-
-          restriccion_alimentaria:
-            !asiste
-              ? "No aplica"
-              : tieneRestriccion
-              ? restriccion.trim()
-              : "Ninguna",
-        },
-      ]);
-
-    if (supabaseError) {
-      console.error(supabaseError);
-
-      setError(
-        "No pudimos guardar tu confirmación. Probá nuevamente."
-      );
-
-      setEnviando(false);
-      return;
-    }
 
     setEnviado(true);
     setEnviando(false);

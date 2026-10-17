@@ -14,7 +14,7 @@ const Inforelevante = () => {
       <div className="info-relevante__fecha-hora">
         <div className="info-relevante__dato">
           <span className="info-relevante__valor">
-            10·10·26
+            10·10·27
           </span>
         </div>
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Cuentaregresiva.css";
 
 const Cuentaregresiva = () => {
-  const fechaEvento = new Date("2026-10-10T21:00:00");
+  const fechaEvento = new Date("2027-10-10T21:00:00");
 
   const calcularTiempoRestante = () => {
     const ahora = new Date();
